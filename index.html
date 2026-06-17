@@ -1009,6 +1009,29 @@
     }
 
     /* CERTIFICATIONS SECTION */
+
+        .cert-image {
+      width: 100%;
+      height: 200px;
+      background: linear-gradient(135deg, #fce7f3, #f3e8ff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      overflow: hidden;
+    }
+
+    /* 🟢 TAMBAHKAN BLOK INI BIAR GAMBAR MUNCUL DAN PAS DI KARTU */
+    .cert-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .cert-card:nth-child(2) .cert-image {
+      background: linear-gradient(135deg, #dcfce7, #e8f5e9);
+    }
     .certifications {
       padding: 5rem 0;
       background: linear-gradient(to bottom, #f8fafc, #ffffff);
@@ -1348,13 +1371,10 @@
               <a href="#about" class="btn-outline">About me</a>
             </div>
           </div>
-          <div class="hero-image-card" onclick="document.getElementById('hero-file-input').click()">
-            <input type="file" id="hero-file-input" class="gallery-card-input" accept="image/*" onchange="handleHeroImageUpload(event)">
-            <img id="hero-image" class="gallery-card-image" alt="Profile photo">
-            <div class="hero-image-placeholder" id="hero-placeholder">
-              <span>📸</span>
-              <p>Klik untuk upload foto</p>
-            </div>
+                    <div class="hero-image-card">
+            <!-- Ganti "profile.jpg" dengan nama file foto profil Anda -->
+            <img id="hero-image" src="gallery4.jpg" alt="Profile photo">
+          </div>
           </div>
         </div>
       </div>
@@ -1495,67 +1515,45 @@
       <div class="container">
         <p class="section-label">gallery</p>
         <h2>Activity <span class="gradient-text">Highlights</span></h2>
-        <div class="gallery-grid">
-          <div class="gallery-card" onclick="triggerFileInput(this)">
-            <input type="file" class="gallery-card-input" accept="image/*" onchange="handleImageUpload(event, this.parentElement)">
-            <img class="gallery-card-image" alt="Gallery image">
-            <div class="gallery-card-overlay">
-             <div class="gallery-card-overlay-text">Klik untuk ganti foto</div> 
-            </div>
-            <div class="gallery-emoji">🎨</div>
-            <h3 class="gallery-title">Design Workshop</h3>
-            <p class="gallery-desc">Collaborative UI/UX design session</p>
+               <div class="gallery-grid">
+          
+          <!-- CARD 1 -->
+          <div class="gallery-card has-image">
+            <!-- Ganti "gallery1.jpg" dengan nama file gambar Anda -->
+            <img class="gallery-card-image" src="gallery1.jpg" alt="Activity 1">
           </div>
-          <div class="gallery-card" onclick="triggerFileInput(this)">
-            <input type="file" class="gallery-card-input" accept="image/*" onchange="handleImageUpload(event, this.parentElement)">
-            <img class="gallery-card-image" alt="Gallery image">
-            <div class="gallery-card-overlay">
-              <div class="gallery-card-overlay-text">Klik untuk ganti foto</div>
-            </div>
-            <div class="gallery-emoji">👥</div>
-            <h3 class="gallery-title">Team Meeting</h3>
-            <p class="gallery-desc">Project planning and strategy</p>
+
+          <!-- CARD 2 -->
+          <div class="gallery-card has-image">
+            <!-- Ganti "gallery2.jpeg" dengan nama file gambar Anda -->
+            <img class="gallery-card-image" src="gallery2.jpeg" alt="Activity 2">
           </div>
-          <div class="gallery-card" onclick="triggerFileInput(this)">
-            <input type="file" class="gallery-card-input" accept="image/*" onchange="handleImageUpload(event, this.parentElement)">
-            <img class="gallery-card-image" alt="Gallery image">
-            <div class="gallery-card-overlay">
-              <div class="gallery-card-overlay-text">Klik untuk ganti foto</div>
-            </div>
-            <div class="gallery-emoji">💻</div>
-            <h3 class="gallery-title">Coding Session</h3>
-            <p class="gallery-desc">Frontend development sprint</p>
+
+          <!-- CARD 3 -->
+          <div class="gallery-card has-image">
+            <!-- Ganti "gallery3.jpg" dengan nama file gambar Anda -->
+            <img class="gallery-card-image" src="gallery3.jpeg" alt="Activity 3">
           </div>
-          <div class="gallery-card" onclick="triggerFileInput(this)">
-            <input type="file" class="gallery-card-input" accept="image/*" onchange="handleImageUpload(event, this.parentElement)">
-            <img class="gallery-card-image" alt="Gallery image">
-            <div class="gallery-card-overlay">
-              <div class="gallery-card-overlay-text">Klik untuk ganti foto</div>
-            </div>
-            <div class="gallery-emoji">🎤</div>
-            <h3 class="gallery-title">Conference Talk</h3>
-            <p class="gallery-desc">Sharing design insights</p>
+
+          <!-- CARD 4 -->
+          <div class="gallery-card has-image">
+            <!-- Ganti "gallery4.jpg" dengan nama file gambar Anda -->
+            <img class="gallery-card-image" src="gallery4.jpg" alt="Activity 4">
           </div>
-          <div class="gallery-card" onclick="triggerFileInput(this)">
-            <input type="file" class="gallery-card-input" accept="image/*" onchange="handleImageUpload(event, this.parentElement)">
-            <img class="gallery-card-image" alt="Gallery image">
-            <div class="gallery-card-overlay">
-              <div class="gallery-card-overlay-text">Klik untuk ganti foto</div>
-            </div>
-            <div class="gallery-emoji">🚀</div>
-            <h3 class="gallery-title">Hackathon</h3>
-            <p class="gallery-desc">Building innovative solutions</p>
+
+          <!-- CARD 5 -->
+          <div class="gallery-card has-image">
+            <!-- Ganti "gallery5.jpg" dengan nama file gambar Anda -->
+            <img class="gallery-card-image" src="gallery5.png" alt="Activity 5">
           </div>
-          <div class="gallery-card" onclick="triggerFileInput(this)">
-            <input type="file" class="gallery-card-input" accept="image/*" onchange="handleImageUpload(event, this.parentElement)">
-            <img class="gallery-card-image" alt="Gallery image">
-            <div class="gallery-card-overlay">
-              <div class="gallery-card-overlay-text">Klik untuk ganti foto</div>
-            </div>
-            <div class="gallery-emoji">🤝</div>
-            <h3 class="gallery-title">Networking Event</h3>
-            <p class="gallery-desc">Connecting with industry leaders</p>
+
+          <!-- CARD 6 -->
+          <div class="gallery-card has-image">
+            <!-- Ganti "gallery6.jpg" dengan nama file gambar Anda -->
+            <img class="gallery-card-image" src="gallery6.jpeg" alt="Activity 6">
           </div>
+
+        </div>
         </div>
       </div>
     </section>
@@ -1734,53 +1732,79 @@
     </section>
 
     <!-- CERTIFICATIONS SECTION -->
+     <!-- CERTIFICATIONS SECTION -->
     <section class="certifications" id="certifications">
       <div class="container">
         <p class="section-label">achievements</p>
         <h2>Certificate <span class="gradient-text">Achievements</span></h2>
         <div class="cert-grid">
+          
+          <!-- CARD 1 -->
           <div class="cert-card">
-            <div class="cert-image">🎓</div>
+            <div class="cert-image">
+              <!-- Ganti "sertif1.png" dengan link atau nama file gambar sertifikat Anda -->
+              <img src="sertif1.png" alt="UX Fundamentals">
+            </div>
             <div class="cert-body">
               <div class="cert-title">UX Fundamentals: Building the Foundations of Great Design</div>
               <div class="cert-issuer">Google Developer Groups</div>
               <div class="cert-date">2025</div>
             </div>
           </div>
+          <!-- CARD 2 -->
           <div class="cert-card">
-            <div class="cert-image">🏆</div>
+            <div class="cert-image">
+              <!-- Ganti "sertif2.png" dengan link atau nama file gambar sertifikat Anda -->
+              <img src="sertif2.png" alt="Participant Business Case Competition">
+            </div>
             <div class="cert-body">
               <div class="cert-title">Participant Business Case Competition</div>
               <div class="cert-issuer">Mechanical Festival</div>
               <div class="cert-date">2025</div>
             </div>
           </div>
+          <!-- CARD 3 -->
           <div class="cert-card">
-            <div class="cert-image">📰</div>
+            <div class="cert-image">
+              <!-- Ganti "sertif3.png" dengan link atau nama file gambar sertifikat Anda -->
+              <img src="sertif3.png" alt="Junior Staf Reportase">
+            </div>
             <div class="cert-body">
               <div class="cert-title">Junior Staf Reportase</div>
               <div class="cert-issuer">LPM DISPLAY FILKOM</div>
               <div class="cert-date">2024</div>
             </div>
           </div>
+          <!-- CARD 4 -->
           <div class="cert-card">
-            <div class="cert-image">☁️</div>
+            <div class="cert-image">
+              <!-- Ganti "sertif4.png" dengan link atau nama file gambar sertifikat Anda -->
+              <img src="sertif4.png" alt="Cloud Computing Fundamentals">
+            </div>
             <div class="cert-body">
               <div class="cert-title">Cloud Computing Fundamentals</div>
               <div class="cert-issuer">IBM SkillsBuild</div>
               <div class="cert-date">2025</div>
             </div>
           </div>
+          <!-- CARD 5 -->
           <div class="cert-card">
-            <div class="cert-image">💼</div>
+            <div class="cert-image">
+              <!-- Ganti "sertif5.png" dengan link atau nama file gambar sertifikat Anda -->
+              <img src="sertif5.png" alt="Be an Entrepreneur Fundamentals">
+            </div>
             <div class="cert-body">
               <div class="cert-title">Be an Entrepreneur Fundamentals</div>
               <div class="cert-issuer">IBM SkillsBuild</div>
               <div class="cert-date">2025</div>
             </div>
           </div>
+          <!-- CARD 6 -->
           <div class="cert-card">
-            <div class="cert-image">📊</div>
+            <div class="cert-image">
+              <!-- Ganti "sertif6.png" dengan link atau nama file gambar sertifikat Anda -->
+              <img src="sertif6.png" alt="Data Analysis with Tableau and Excel">
+            </div>
             <div class="cert-body">
               <div class="cert-title">Data Analysis with Tableau and Excel</div>
               <div class="cert-issuer">Allman</div>
@@ -1799,9 +1823,9 @@
         <div class="contact-content">
           <p class="contact-text">I'm always interested in hearing about new projects and opportunities.</p>
           <div class="contact-links">
-            <a href="mailto:your@email.com" class="contact-btn">📧 Email me</a>
-            <a href="https://linkedin.com/in/yourprofile" target="_blank" class="contact-btn">💼 LinkedIn</a>
-            <a href="https://github.com" target="_blank" class="contact-btn">🐙 GitHub</a>
+            <a href="mailto:putriagatha193@gmail.com" class="contact-btn">📧 Email me</a>
+            <a href="https://www.linkedin.com/in/agatha-jeanetta/" target="_blank" class="contact-btn">💼 LinkedIn</a>
+            <a href="https://www.instagram.com/jeanettaagatha" target="_blank" class="contact-btn">🐙 Instagram</a>
           </div>
         </div>
       </div>
